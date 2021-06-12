@@ -6,9 +6,10 @@ import img_cor from '../constant.js'
 import '../Css/dashboard.css'
 import '../../node_modules/slick-carousel/slick/slick.css'
 import '../../node_modules/slick-carousel/slick/slick-theme.css'
+import { withRouter } from "react-router";
 
 
-export default class Carousel extends Component {
+class Carousel extends Component {
     render() {
         const settings = {
 
@@ -31,7 +32,7 @@ export default class Carousel extends Component {
                     </div> */}
 
                     <div id="carousel-items">
-                        <Slider {...settings}>
+                        {/* <Slider {...settings}> */}
                             {/* {img_cor.map((data) => (
                         
                         <div className="carousel-item" >
@@ -142,7 +143,7 @@ export default class Carousel extends Component {
                         </div>
                     </div> 
                     */}
-                        </Slider>
+                        {/* </Slider> */}
                     </div>
 
                 </div>
@@ -150,3 +151,5 @@ export default class Carousel extends Component {
         )
     }
 }
+
+export default withRouter (Carousel)

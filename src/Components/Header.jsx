@@ -1,16 +1,17 @@
 import React , { Component } from "react";
 import '../Css/dashboard.css'
 import head_logo from '../Asset/logo.svg'
+import { withRouter } from "react-router";
 
-export default class Header extends Component{
+class Header extends Component{
     render(){
         return(
             <div>
                 <div className="c-site-head__logo | js-logo-link" aria-label="Home" >
                     <img src={head_logo} alt=""></img>
                     <div className="navbar" id="header-navbar">
-                        <ul>
-                            <li className="list-items" id="aboutus">About DLC</li>
+                        <ul className="ulist">
+                            <li className="list-items" id="aboutus" onClick={()=>this.props.history.push('./AboutDLC')}>About DLC</li>
                             <li className="list-items" id="ourworlds">Our World</li>
                             <li className="list-items" id="exp">Experiences</li>
                             <li className="list-items" id="gallery">Gallery</li>
@@ -43,3 +44,4 @@ export default class Header extends Component{
         )
     }
 }
+export default withRouter (Header)

@@ -3,6 +3,7 @@ import video from '../Asset/DLC web hero 1.5min organized by property.mov.mp4'
 import Carousel from '../Components/Carousel'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+import { withRouter } from 'react-router'
 
 const Dashboard = () => {
     return (

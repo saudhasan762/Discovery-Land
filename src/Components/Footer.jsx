@@ -1,8 +1,9 @@
 import { Component } from 'react'
 import '../Css/dashboard.css'
 import foot_logo from '../Asset/footlogo.svg'
+import { withRouter } from 'react-router'
 
-export default class Footer extends Component{
+class Footer extends Component{
     render(){
         return(
             <div>
@@ -69,3 +70,5 @@ export default class Footer extends Component{
         )
     }
 }
+
+export default withRouter (Footer)

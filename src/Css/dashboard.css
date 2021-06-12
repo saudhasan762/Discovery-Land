@@ -22,6 +22,7 @@ position: absolute;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
+
 }
 
 .c-site-head__logo img{
@@ -34,6 +35,10 @@ justify-content: space-around;
     margin-right:  80px;
     font-family: 'Roboto', sans-serif;
     color : #fff;
+}
+
+.ulist{
+    left: 100px;
 }
 
 
