@@ -4,13 +4,49 @@ import Carousel from '../Components/Carousel'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import { withRouter } from 'react-router'
+import down from '../Asset/down.svg'
+import down1 from '../Asset/down1.svg'
+import arrow from '../Asset/down-arrow.png'
+
 
 const Dashboard = () => {
+
     return (
         <div>
             <div className="header-main">
                 <video src={video} muted loop autoPlay playsInline></video>
                 <Header />
+                <div className="c-site-head__logo">
+                    <h1 class="c-hero-slider__title o-h0">
+                        <div class="c-line c-line--1 | js-transition-line" >
+                            <div className="dis-main">
+                                <div className="dis-sub">Discover
+                                </div>
+                                <div className="dis-subb">your world</div>
+                            </div>
+
+                        </div>
+                    </h1>
+                </div>
+                <button type="button" className="hero-scroll | js-hero-scroll">
+                    <div className="hero-scroll__arrows">
+                        <span className="hero-scroll__arrow-1">
+                        {/* {down} */}
+                        <img src={arrow} alt="" className="arrow1"></img>
+                        </span>
+                        {/* <span className="hero-scroll__arrow-1"> */}
+                        {/* {down} */}
+                        {/* <img src={arrow} alt="" className="arrow1"></img>
+                        </span> */}
+                        {/* </span>
+                                    <span className="hero-scroll__arrow-2"> */}
+                        {/* {down1} */}
+                        {/* <img src={down1} alt="" className="arrow2"></img> */}
+                        {/* </span> */}
+                    </div>
+                </button>
+
+
                 <div className="c-hero__ctas">
                     <div className="c-hero__text">
                         <div className="c-hero-labels">
@@ -48,6 +84,7 @@ const Dashboard = () => {
                         </div>
                     </button> */}
                 </div>
+
 
 
             </div>
@@ -99,8 +136,10 @@ const Dashboard = () => {
                         </div>
                     </button>
                 </div>
+
             </div>
             <Carousel />
+
             {/* <div id="carouselandglobe">
 
                 <div className="empty-space">
@@ -283,7 +322,7 @@ const Dashboard = () => {
 
                 </div>
 
-                <div id="wellness">
+                <div id="wellness1">
 
                     <img src="https://dxaurk9yhilm4.cloudfront.net/images/730/wellness_slider_190716_095551_7a63ac04cea98219d28754079427d015.jpg" alt="" class="expimg"></img>
                     <div class="buttonandtitle">

@@ -1,20 +1,37 @@
-import { Component } from "react";
+import { Component, useEffect } from "react";
 import '../Css/AboutDLC.css'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Carousel from '../Components/Carousel'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
-export default class AboutDLC extends Component {
-    render() {
+const AboutDLC = () => {
+    useEffect(() => {
+        Aos.init({duration: 2000})
+    },[])
+    
+        
         return (
             <div>
-                <div id="header-main">
-                    <div id="headerimgcontainer">
-                        <img src="https://dxaurk9yhilm4.cloudfront.net/images/806/YC-DSC_0007-2_2cbd80a0345be3b5a0b7649a1a2d057f.jpg    "
-                            alt="" id="headerimg"></img>
+                <div id="header-main1">
+                    <div id="headerimgcontainer1">
+                        <img src="https://dxaurk9yhilm4.cloudfront.net/images/806/YC-DSC_0007-2_2cbd80a0345be3b5a0b7649a1a2d057f.jpg" aos="fade-zoom-in"
+                            alt="" id="headerimg1"></img>
                     </div>
                     <Header />
+                    <div className="c-site-head__logo">
+                        <h1 class="c-hero-slider__title o-h0">
+                            <div class="c-line c-line--1 | js-transition-line" >
+                                <div className="dis-main">
+                                    <div className="dis-sub">Creating Your
+                                </div>
+                                    <div className="dis-subb">Perfect world</div>
+                                </div>
+                            </div>
+                        </h1>
+                    </div>
                 </div>
                 <div id="story">
                     <div id="storydesc">
@@ -54,13 +71,13 @@ export default class AboutDLC extends Component {
                         <div id="onlyimgmission">
                             <div class="missionimgcontainer">
                                 <img src="https://dxaurk9yhilm4.cloudfront.net/images/163/What_we_do_intro_5ae402c9837860cd6e4f65e304b3a5fa.jpg"
-                                    alt="" id="missionimg"></img>
+                                    alt="" id="missionimg" ></img>
                             </div>
                         </div>
                     </div>
                     <div id="bayimg">
                         <img data-lazy-src="https://dxaurk9yhilm4.cloudfront.net/images/696/Bakers_Carousel3_62018727b9e8103a3d5d6c0701991eca.jpg" alt="" src="https://dxaurk9yhilm4.cloudfront.net/images/696/Bakers_Carousel3_62018727b9e8103a3d5d6c0701991eca.jpg"
-                            id="imgbay"></img>
+                            id="imgbay" data-aos="zoom-in"></img>
                     </div>
 
                     <div id="differencecarousel">
@@ -92,7 +109,7 @@ export default class AboutDLC extends Component {
                 </div>
                 <div id="design">
                     <div id="designimg">
-                        <img data-lazy-src="https://dxaurk9yhilm4.cloudfront.net/images/159/What_we_do_design_hero_62018727b9e8103a3d5d6c0701991eca.jpg" alt="" data-parallax="{&quot;scale&quot;: &quot;[1, 1.25]&quot;}" data-parallax-mobile="" src="https://dxaurk9yhilm4.cloudfront.net/images/159/What_we_do_design_hero_62018727b9e8103a3d5d6c0701991eca.jpg" id="imgd"></img>
+                        <img data-lazy-src="https://dxaurk9yhilm4.cloudfront.net/images/159/What_we_do_design_hero_62018727b9e8103a3d5d6c0701991eca.jpg" alt="" data-parallax="{&quot;scale&quot;: &quot;[1, 1.25]&quot;}" data-parallax-mobile="" src="https://dxaurk9yhilm4.cloudfront.net/images/159/What_we_do_design_hero_62018727b9e8103a3d5d6c0701991eca.jpg" id="imgd" data-aos="zoom-out"></img>
                     </div>
                     <div id="discoverydesign">
                         <div id="onlyimgdesign">
@@ -149,5 +166,7 @@ export default class AboutDLC extends Component {
 
             </div>
         )
-    }
+    
 }
+
+export default AboutDLC

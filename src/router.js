@@ -1,6 +1,9 @@
 import { BrowserRouter , Route, Switch } from 'react-router-dom'
 import Dashboard from './Pages/dashboard'
 import AboutDLC from './Pages/AboutDLC'
+import OurWorld from './Pages/OurWorld'
+import Experiences from './Pages/Experiences'
+import Gallery from './Pages/Gallery'
 
  const Routing = () => {
     return(
@@ -9,6 +12,9 @@ import AboutDLC from './Pages/AboutDLC'
             <Switch>
             <Route exact path='/' component={Dashboard}></Route>
             <Route exact path='/AboutDLC' component={AboutDLC}></Route>
+            <Route exact path='/OurWorld' component={OurWorld}></Route>
+            <Route exact path='/Experiences' component={Experiences}></Route>
+            <Route exact path='/Gallery' component={Gallery}></Route>
             </Switch>
         </div>
         </BrowserRouter>

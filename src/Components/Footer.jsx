@@ -1,13 +1,19 @@
-import { Component } from 'react'
+import { Component, useEffect } from 'react'
 import '../Css/dashboard.css'
 import foot_logo from '../Asset/footlogo.svg'
 import { withRouter } from 'react-router'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
-class Footer extends Component{
-    render(){
+
+const Footer = () =>{
+ 
+        useEffect(() => {
+            Aos.init({})
+        },[])
         return(
             <div>
-                <footer className="footer">
+                <footer className="footer" data-aos="slide-up">
                 <div className="footercontainer">
                     <div className="logoactual">
                         <img src={foot_logo} alt=""></img>
@@ -68,7 +74,6 @@ class Footer extends Component{
             </footer>
             </div>
         )
-    }
-}
+        }
 
 export default withRouter (Footer)

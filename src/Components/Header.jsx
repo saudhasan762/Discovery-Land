@@ -8,13 +8,13 @@ class Header extends Component{
         return(
             <div>
                 <div className="c-site-head__logo | js-logo-link" aria-label="Home" >
-                    <img src={head_logo} alt=""></img>
+                    <img src={head_logo} alt="" onClick={()=>this.props.history.push('./')}></img>
                     <div className="navbar" id="header-navbar">
                         <ul className="ulist">
                             <li className="list-items" id="aboutus" onClick={()=>this.props.history.push('./AboutDLC')}>About DLC</li>
-                            <li className="list-items" id="ourworlds">Our World</li>
-                            <li className="list-items" id="exp">Experiences</li>
-                            <li className="list-items" id="gallery">Gallery</li>
+                            <li className="list-items" id="ourworlds" onClick={()=>this.props.history.push('./OurWorld')}>Our World</li>
+                            <li className="list-items" id="exp" onClick={()=>this.props.history.push('./Experiences')}>Experiences</li>
+                            <li className="list-items" id="gallery" onClick={()=>this.props.history.push('./Gallery')}>Gallery</li>
                             <li className="list-items" id="press">Press</li>
                         </ul>
                     </div>
@@ -30,15 +30,7 @@ class Header extends Component{
                             </div>
                         </div>
                     </button>
-                    <h1 class="c-hero-slider__title o-h0">
-                        <div class="c-line c-line--1 | js-transition-line" >
-                            <div className="dis-main">
-                                <div className="dis-sub">Discover
-                                </div>
-                                <div className="dis-subb">your world</div>
-                            </div>
-                        </div>
-                    </h1>
+                    
                 </div>
             </div>
         )
